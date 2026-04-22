@@ -1,35 +1,27 @@
-# Team ChalkWise — Pre-Launch Toolkit
+﻿# Team ChalkWise — Social Content Pipeline
 
 **Project:** [ChalkWise](https://chalkwise.illinihunt.org/) is a gamified student-matching app for UIUC students that helps classmates find study partners based on shared courses, study preferences, and availability.
 **Built by:** Charlie, Billy, Sofia
-**Automation type:** Marketing + Operations
+**Automation type:** Marketing
 
 ---
 
 ## Product
 
-ChalkWise is a UIUC-only matching app that helps students find study partners in the same classes through a more structured, lower-friction flow than Reddit, Discord, or GroupMe. Users sign up with their `@illinois.edu` email, build a profile with their major, classes, study style, and availability, then browse and match with relevant classmates. If two users mutually match, ChalkWise opens a direct message so they can start coordinating right away.
+ChalkWise is a UIUC-only student matching app that helps students find study partners in the same classes. Users sign up with their `@illinois.edu` email, create a profile with their classes, study style, and availability, and browse potential matches through a gamified discover flow. If two users mutually match, they can directly message each other to coordinate studying.
 
 ## Automation
 
-Our team built a pre-launch toolkit with two automations: a **Social Content Pipeline** and a **Launch Readiness Dashboard**. The marketing automation generated a full 7-day content calendar across LinkedIn, Instagram, and X so ChalkWise could launch with a consistent audience-facing message instead of posting randomly or not posting at all. The operations automation produced a structured readiness scorecard and fix-it checklist so the team could identify launch blockers, polish issues, and product gaps before promoting the app more broadly.
+Our automation was a Social Content Pipeline for ChalkWise. It took our product context, user feedback, launch goals, and competitor positioning and turned that into an audience analysis, a 7-day content calendar, and a content hub page with platform-specific posts for LinkedIn, Instagram, and X. It solved the problem that before this, ChalkWise had no real social posting system at all.
 
 ## Prompt used
 
-We used prompt chaining across the capstone workflow, but these were the two most important final prompts:
-
-**Marketing automation prompt**
-
-> Create a social content pipeline for ChalkWise using the product summary, user feedback, launch goals, and competitor notes in my project context. Build an audience analysis first, then generate a 7-day content calendar with platform-specific posts for LinkedIn, Instagram, and X, and finally create a clean content hub page that organizes the full campaign.
-
-**Operations automation prompt**
-
-> Run a launch-readiness audit for ChalkWise using the live site and my project context. Evaluate broken links and navigation, mobile responsiveness, empty states and edge cases, error handling, SEO basics, and accessibility. Save the output as a launch-readiness scorecard and a prioritized fix-it checklist.
+Create a social content pipeline for ChalkWise using the product summary, user feedback, launch goals, and competitor notes in my project context. Build an audience analysis first, then generate a 7-day content calendar with platform-specific posts for LinkedIn, Instagram, and X, and finally create a clean content hub page that organizes the full campaign.
 
 ## Inner / outer loop
 
-- **Inner loop (AI execution):** Codex synthesized our product context into audience positioning, generated platform-specific social copy, organized it into a content hub, reviewed the live ChalkWise site, and turned the audit into a scorecard plus prioritized checklist.
-- **Outer loop (human judgment):** We decided the brand voice, clarified the target users, selected which automations mattered most for launch, checked whether the generated content sounded like ChalkWise, and evaluated whether the audit findings matched our real product instincts.
+- **Inner loop (AI execution):** Codex synthesized our product context into audience positioning, generated platform-specific social media copy, built a 7-day posting calendar, and created a clean content hub page to organize the campaign.
+- **Outer loop (human judgment):** We decided the brand voice, clarified who the target users were, evaluated whether the generated content actually sounded like ChalkWise, and approved the final tone and direction.
 
 ## Anthropic agent pattern
 
@@ -41,15 +33,15 @@ Which of these fits best? Pick one and defend in 1–2 sentences.
 - [ ] Orchestrator-worker
 - [ ] Evaluator-optimizer
 
-**Why this one:** This workflow depended on sequential context-building: first we documented the product, feedback, competitors, and goals, then we used that context to generate marketing outputs and operations outputs. Each automation got better because it was chained off the project knowledge base we built first.
+**Why this one:** This workflow relied on sequential context-building. We first defined the product, target audience, user feedback, competitors, and launch goals, then used that context to generate the audience analysis and content outputs. Each step improved the quality of the next one.
 
 ## What required human judgment
 
-The automations were not fully autonomous because we still had to decide what success looked like, which users mattered first, what voice felt right for the product, and whether the audit findings were truly launch-critical. If we had let Codex run end-to-end without checking in, it could have produced content that sounded generic or an audit that overemphasized minor issues instead of the real priorities, like class-section specificity and public-facing product credibility.
+The automation was not fully autonomous because we still had to decide what voice fit ChalkWise, which users we wanted to speak to first, and whether the generated content actually matched our product and audience. If we had let Codex run end-to-end without checking in, it could have produced content that sounded generic or too polished instead of feeling like a real student product for UIUC.
 
 ## What didn't work
 
-The process was not perfect on the first try. We had to clarify that our project files should live in a separate ChalkWise workspace rather than the NovaBrew course workspace, and some of the generated language needed human review to make sure it felt like a student product instead of generic startup copy. The audit also had limitations: it could identify obvious issues like weak metadata and likely edge-case risks, but it was not a substitute for real device testing or deeper product validation with more users.
+The process did not work perfectly on the first try. We had to clarify the brand voice before the content felt right, and we still needed to review the posts to make sure they sounded like ChalkWise instead of generic startup marketing. Another limitation was that the automation could generate a strong content system quickly, but it still depended on us to judge whether the tone, messaging, and priorities matched what real UIUC students would respond to.
 
 ---
 
