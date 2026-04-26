@@ -1,0 +1,234 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #09111f;
+  color: #edf3ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(67, 201, 255, 0.18), transparent 25%),
+    radial-gradient(circle at top right, rgba(127, 86, 217, 0.16), transparent 28%),
+    linear-gradient(180deg, #0a1220, #09111f);
+}
+
+.app-shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 56px;
+}
+
+.hero,
+.panel,
+.stat-card,
+.check-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+}
+
+.hero,
+.panel {
+  border-radius: 28px;
+  padding: 28px;
+}
+
+.hero {
+  margin-bottom: 20px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  color: #b9c9ef;
+  margin-bottom: 12px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(34px, 6vw, 58px);
+  line-height: 0.98;
+}
+
+.hero p,
+.check-card p,
+.steps {
+  color: #afbdd9;
+  line-height: 1.7;
+}
+
+.env-banner {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(67, 201, 255, 0.1);
+  color: #d8ecff;
+}
+
+.timestamp-banner {
+  margin-top: 12px;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #d8ecff;
+}
+
+.timestamp-banner span {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 11px;
+  color: #b9c9ef;
+}
+
+.timestamp-banner strong {
+  font-size: 14px;
+}
+
+.security-badge-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.security-badge-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  padding: 14px 16px;
+}
+
+.security-badge-card span {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 11px;
+  color: #b9c9ef;
+  margin-bottom: 8px;
+}
+
+.security-badge-card strong {
+  font-size: 18px;
+}
+
+.error-banner {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(251, 113, 133, 0.14);
+  color: #ffd5db;
+}
+
+.stat-grid,
+.two-column {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.stat-grid.compact {
+  margin-top: -4px;
+}
+
+.two-column {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.stat-card {
+  border-radius: 22px;
+  padding: 18px;
+}
+
+.stat-card span,
+.panel h2 {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+  color: #b9c9ef;
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+.panel h2 {
+  margin: 0 0 16px;
+}
+
+.card-list {
+  display: grid;
+  gap: 14px;
+}
+
+.check-card {
+  border-radius: 20px;
+  padding: 18px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.row h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.badge {
+  padding: 7px 11px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+
+.badge.pass {
+  background: rgba(16, 185, 129, 0.14);
+  color: #9df1cf;
+}
+
+.badge.warn {
+  background: rgba(251, 191, 36, 0.14);
+  color: #f9dd8b;
+}
+
+.badge.pending {
+  background: rgba(148, 163, 184, 0.14);
+  color: #d2d9e7;
+}
+
+.steps {
+  margin: 0;
+  padding-left: 20px;
+}
+
+@media (max-width: 900px) {
+  .stat-grid,
+  .two-column,
+  .security-badge-row {
+    grid-template-columns: 1fr;
+  }
+}
